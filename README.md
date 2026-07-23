@@ -134,28 +134,3 @@ cd Mockito_HandsOn/Advanced_Mockito
 mvn test
 ```
 
----
-
-## 🚀 How to Push to GitHub
-
-Open Git Bash or Command Prompt in the repository folder:
-
-```bash
-cd C:\Users\DELL\.gemini\antigravity\scratch\Cognizant
-
-# Initialize git repository
-git init
-
-# Add remote origin
-git remote add origin https://github.com/LahariYeddula/Cognizant.git
-
-# Stage all files
-git add .
-
-# Create initial commit
-git commit -m "Add complete Cognizant hands-on exercise solutions for Angular, JUnit, and Mockito"
-
-# Rename branch to main & push
-git branch -M main
-git push -u origin main
-```
