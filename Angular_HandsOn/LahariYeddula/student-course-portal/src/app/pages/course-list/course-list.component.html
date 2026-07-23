@@ -1,0 +1,38 @@
+<div class="course-list-container">
+  <h2>Available Courses</h2>
+
+  <!-- Step 25: *ngIf loading indicator -->
+  <div *ngIf="isLoading || (loading$ | async)" class="loading-spinner">
+    <p>Loading courses...</p>
+  </div>
+
+  <!-- Error Alert -->
+  <div *ngIf="error$ | async as err" class="error-banner">
+    <p>{{ err }}</p>
+  </div>
+
+  <!-- Step 24: Display selected course ID -->
+  <p *ngIf="selectedCourseId" class="selected-course-info">
+    Selected course ID: <strong>{{ selectedCourseId }}</strong>
+  </p>
+
+  <!-- Step 26 & 28: *ngFor with trackBy and *ngIf with else #noCourses -->
+  <div *ngIf="!isLoading && (courses$ | async) as courses">
+    <div *ngIf="courses.length > 0; else noCourses" class="courses-grid">
+      <app-course-card
+        *ngFor="let course of courses; let i = index; trackBy: trackByCourseId"
+        [course]="course"
+        [isEnrolled]="(enrolledIds$ | async)?.includes(course.id) || false"
+        (enrollRequested)="onEnroll($event)"
+        (click)="navigateToDetail(course.id)"
+      ></app-course-card>
+    </div>
+  </div>
+
+  <!-- Step 28: ng-template fallback for empty array -->
+  <ng-template #noCourses>
+    <div class="empty-state">
+      <p>No courses available at this time.</p>
+    </div>
+  </ng-template>
+</div>

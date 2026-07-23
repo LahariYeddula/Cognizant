@@ -1,0 +1,57 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Data Structures & Algorithms",
+      "code": "CS101",
+      "credits": 4,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 2,
+      "name": "Database Management Systems",
+      "code": "CS102",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 3,
+      "name": "Web Application Development",
+      "code": "CS103",
+      "credits": 4,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": 4,
+      "name": "Operating Systems",
+      "code": "CS104",
+      "credits": 3,
+      "gradeStatus": "failed"
+    },
+    {
+      "id": 5,
+      "name": "Software Engineering Principles",
+      "code": "CS105",
+      "credits": 2,
+      "gradeStatus": "pending"
+    }
+  ],
+  "students": [
+    {
+      "id": 101,
+      "name": "Lahari Yeddula",
+      "email": "lahari@example.com",
+      "enrolledCourseIds": [1, 2, 3]
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentName": "Lahari Yeddula",
+      "studentEmail": "lahari@example.com",
+      "courseId": 1,
+      "preferredSemester": "Odd",
+      "agreeToTerms": true
+    }
+  ]
+}

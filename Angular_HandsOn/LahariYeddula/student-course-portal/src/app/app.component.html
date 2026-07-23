@@ -1,0 +1,11 @@
+<!-- Step 9: Root component template with app-header and router-outlet -->
+<app-header></app-header>
+
+<div *ngIf="loadingService.isLoading$ | async" class="global-spinner-overlay">
+  <div class="spinner"></div>
+  <span>Processing request...</span>
+</div>
+
+<main class="content-wrapper">
+  <router-outlet></router-outlet>
+</main>

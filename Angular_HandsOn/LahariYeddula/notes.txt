@@ -1,0 +1,39 @@
+========================================================================
+DIGITAL NURTURE 5.0 - ANGULAR (v20.0) HANDS-ON EXERCISE BOOK
+ORGANISATION: Cognizant Deep Skilling Program
+NAME: Lahari Yeddula
+PROJECT: Student Course Portal
+========================================================================
+
+TASK 1: PROJECT FILE EXPLANATIONS
+------------------------------------------------------------------------
+
+1. angular.json
+   Controls the Angular CLI workspace configuration, build targets, assets, stylesheets, scripts, and build budget limits (maximumWarning and maximumError thresholds).
+
+2. tsconfig.json
+   Root TypeScript compiler configuration file specifying language target, module resolution rules, and strict type-checking flags across the entire workspace.
+
+3. tsconfig.app.json
+   Application-specific TypeScript configuration extending tsconfig.json, specifying files included in the application bundle and build target settings.
+
+4. package.json
+   Manifest file listing project dependencies (@angular/core, @ngrx/store, rxjs, etc.), devDependencies, scripts (ng serve, ng build, ng test), and versioning details.
+
+5. src/main.ts
+   Application entry point that bootstraps either the root AppModule or the root Standalone Component (AppComponent) with modern app.config.ts configuration.
+
+6. src/app/app.config.ts (or app.module.ts)
+   Configures global application providers including routing (provideRouter), HTTP client with interceptors (provideHttpClient), state management (provideStore, provideEffects), and animations.
+
+7. src/app/app.component.ts
+   The root component decorator and class defining the top-level application view, holding layout placeholders like <app-header> and <router-outlet>.
+
+8. src/index.html
+   The primary single-page entry HTML document containing the <app-root> host element where Angular dynamically mounts the component tree.
+
+------------------------------------------------------------------------
+BUDGETS CONFIGURATION (architect > build > configurations > production):
+- maximumWarning (e.g., 500kb): Triggers a build warning if initial bundle size exceeds this limit.
+- maximumError (e.g., 1mb): Fails the build completely if initial bundle size exceeds this threshold to prevent shipping bloated bundles.
+------------------------------------------------------------------------

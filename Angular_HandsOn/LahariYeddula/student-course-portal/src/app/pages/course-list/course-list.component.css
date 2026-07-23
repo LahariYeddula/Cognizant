@@ -1,0 +1,43 @@
+.course-list-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #3498db;
+  font-weight: 600;
+}
+
+.error-banner {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.selected-course-info {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #888;
+}

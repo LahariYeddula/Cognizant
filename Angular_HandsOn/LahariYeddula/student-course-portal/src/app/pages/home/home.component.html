@@ -1,0 +1,52 @@
+<div class="home-container">
+  <!-- Step 11: String interpolation -->
+  <h1>Welcome to {{ portalName }}</h1>
+  <p class="description">
+    Your central dashboard for managing academic courses, viewing profile data, tracking grades, and enrolling in upcoming semesters.
+  </p>
+
+  <!-- Step 8: Hardcoded/Dynamic stats row -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-value">{{ availableCoursesCount }}</span>
+      <span class="stat-label">Courses Available</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">{{ enrolledCount }}</span>
+      <span class="stat-label">Enrolled</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">{{ gpa }}</span>
+      <span class="stat-label">GPA</span>
+    </div>
+  </div>
+
+  <div class="interactive-section">
+    <h3>Interactive Binding Controls</h3>
+
+    <!-- Step 12 & 13: Property binding [disabled] and event binding (click) -->
+    <div class="action-box">
+      <button [disabled]="!isPortalActive" (click)="onEnrollClick()" class="btn btn-primary">
+        Enroll Now
+      </button>
+      <p *ngIf="message" class="alert-message">{{ message }}</p>
+    </div>
+
+    <!-- Step 14: Two-way binding with [(ngModel)] -->
+    <div class="search-box">
+      <label for="courseSearch">Search Courses: </label>
+      <input
+        id="courseSearch"
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Type course title or keyword..."
+        class="form-control"
+      />
+      <p class="search-output">Searching for: <strong>{{ searchTerm }}</strong></p>
+    </div>
+
+    <!-- Step 62 & 67: Service & Provider demonstrations -->
+    <app-course-summary-widget></app-course-summary-widget>
+    <app-notification></app-notification>
+  </div>
+</div>
