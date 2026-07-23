@@ -1,4 +1,4 @@
-# Cognizant Digital Nurture 5.0 - Skilling
+# Cognizant Digital Nurture 5.0 
 
 Complete, production-ready solutions for all hands-on exercises covering **Angular (v20.0)**, **JUnit Testing (Basic & Advanced)**, and **Mockito Framework (Basic & Advanced)** as part of the Digital Nurture 5.0 .NET / Full Stack Skilling Track.
 
